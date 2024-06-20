@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    /* Add some basic styling */
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    label, input, textarea, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <form action="/submit-form" method="post" novalidate>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone">
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <label for="subject">Subject:</label>
+    <select id="subject" name="subject" required>
+      <option value="">Select a subject</option>
+      <option value="inquiry">Inquiry</option>
+      <option value="feedback">Feedback</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="consent">
+      <input type="checkbox" id="consent" name="consent" required>
+      I agree to the terms and conditions
+    </label>
+
+    <button type="submit">Send Message</button>
+  </form>
+</body>
+</html>
